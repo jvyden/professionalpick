@@ -13,16 +13,16 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 )
 public class ProfessionalPick {
 
-    public static final String MOD_ID = "professionalpick";
-    public static final String MOD_NAME = "ProfessionalPick";
-    public static final String VERSION = "1.0";
+    public static final String MOD_ID = BuildInfo.MAVEN_NAME;
+    public static final String MOD_NAME = "The Professional's Pickaxe";
+    public static final String VERSION = BuildInfo.VERSION;
 
     @Mod.Instance(MOD_ID)
     public static ProfessionalPick INSTANCE;
 
     @Mod.EventHandler
     public void preinit(FMLPreInitializationEvent event) {
-
+        ItemHandler.init();
     }
 
     @Mod.EventHandler
