@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "professionalpick",
+    "name": "ProfessionalPick",
+    "description": "The Professional's Pickaxe",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "jvyden"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
