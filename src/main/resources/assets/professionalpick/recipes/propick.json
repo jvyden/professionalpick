@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DED",
+    "RSR",
+    "1S2"
+  ],
+  "key": {
+    "D": [
+      {
+        "item": "minecraft:diamond",
+        "data": 0
+      }
+    ],
+    "E": [
+      {
+        "item": "minecraft:emerald",
+        "data": 0
+      }
+    ],
+    "R": [
+      {
+        "item": "minecraft:redstone",
+        "data": 0
+      }
+    ],
+    "S": [
+      {
+        "item": "minecraft:stick",
+        "data": 0
+      }
+    ],
+    "1": [
+      {
+        "type": "minecraft:item_nbt",
+        "item": "minecraft:enchanted_book",
+        "nbt": "{ StoredEnchantments: [ { id: 35s, lvl: 3s } ] }"
+      }
+    ],
+    "2": [
+      {
+        "type": "minecraft:item_nbt",
+        "item": "minecraft:enchanted_book",
+        "nbt": "{ StoredEnchantments: [ { id: 33s, lvl: 1s } ] }"
+      }
+    ]
+  },
+  "result": {
+    "item": "professionalpick:propick"
+  }
+}

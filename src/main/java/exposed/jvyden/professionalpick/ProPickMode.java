@@ -1,17 +1,23 @@
 package exposed.jvyden.professionalpick;
 
 public enum ProPickMode {
-    NORMAL(0),
-    SILK(1),
-    FORTUNE(2);
+    NORMAL(0, "Normal"),
+    SILK(1, "Silk Touch"),
+    FORTUNE(2, "Fortune");
 
     int id;
-    ProPickMode(int i) {
-        id = i;
+    String prettyString;
+    ProPickMode(int id, String prettyString) {
+        this.id = id;
+        this.prettyString = prettyString;
     }
 
     public int getID() {
         return id;
+    }
+
+    public String getPrettyString() {
+        return prettyString;
     }
 
     public static ProPickMode valueOf(int id) {
