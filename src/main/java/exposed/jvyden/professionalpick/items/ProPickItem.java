@@ -30,6 +30,7 @@ import java.util.Objects;
 
 public class ProPickItem extends ItemPickaxe {
     ProPickMode mode = ProPickMode.NORMAL;
+    long lastSwitchTime = 0;
     public ProPickItem(String name) {
         super(ToolMaterial.DIAMOND);
 
@@ -100,6 +101,8 @@ public class ProPickItem extends ItemPickaxe {
     }
 
     public void switchMode(ItemStack item) {
+        if(System.currentTimeMillis() < lastSwitchTime + 100) return;
+        lastSwitchTime = System.currentTimeMillis();
         int modeInt = mode.getID();
         modeInt++;
         if (modeInt > 2) {
