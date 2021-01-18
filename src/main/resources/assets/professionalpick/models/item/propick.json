@@ -1,6 +1,26 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "minecraft:items/diamond_pickaxe"
-  }
+    "layer0": "professionalpick:items/propick-normal"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "mode": 0
+      },
+      "model": "professionalpick:item/propick"
+    },
+    {
+      "predicate": {
+        "mode": 1
+      },
+      "model": "professionalpick:item/propick-silk"
+    },
+    {
+      "predicate": {
+        "mode": 2
+      },
+      "model": "professionalpick:item/propick-fortune"
+    }
+  ]
 }

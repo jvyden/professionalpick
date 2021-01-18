@@ -4,7 +4,9 @@ import exposed.jvyden.professionalpick.ProPickMode;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTBase;
@@ -13,12 +15,14 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -33,6 +37,13 @@ public class ProPickItem extends ItemPickaxe {
         this.setTranslationKey(name);
         this.setCreativeTab(CreativeTabs.TOOLS);
         this.setMaxStackSize(1);
+
+        this.addPropertyOverride(new ResourceLocation("mode"), new IItemPropertyGetter() {
+            @Override
+            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn) {
+                return mode.getID();
+            }
+        });
     }
 
     @Override
