@@ -48,7 +48,6 @@ public class ProPickItem extends ItemPickaxe {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
         final ItemStack itemStack = player.getHeldItem(hand);
 
@@ -120,7 +119,6 @@ public class ProPickItem extends ItemPickaxe {
                 item.addEnchantment(enchantment, 1);
                 break;
             case NORMAL:
-
                 break;
             case FORTUNE:
                 enchantment = Enchantment.getEnchantmentByLocation("fortune");
